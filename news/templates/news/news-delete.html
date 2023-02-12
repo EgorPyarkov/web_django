@@ -1,0 +1,13 @@
+{% extends "main/sample.html" %}
+
+{% block title %}Удаление записи{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Удаление записи</h1>
+        <form method="post">
+            {% csrf_token %}
+            <button class="btn btn-danger" type="submit">Удалить запись</button>
+        </form>
+    </div>
+{% endblock %}

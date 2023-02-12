@@ -1,0 +1,18 @@
+{% extends "main/sample.html" %}
+
+{% block title %}Создание записи{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Создание записи</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.anons }}<br>
+            {{ form.text }}<br>
+            {{ form.time }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Создать запись</button>
+        </form>
+    </div>
+{% endblock %}
